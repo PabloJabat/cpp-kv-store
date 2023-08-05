@@ -1,0 +1,14 @@
+# Editor Settings
+.vscode/
+
+# Build folder
+build/*
+!build/.keep
+
+# Binaries
+bin/*
+!bin/.keep
+
+# Test
+tests/*
+!tests/.keep
