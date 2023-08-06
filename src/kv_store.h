@@ -3,11 +3,12 @@
 #ifndef KV_STORE_H
 #define KV_STORE_H
 
+template <typename V>
 class kv_store
 {
 private:
     char *keys;
-    char *values;
+    V *values;
     int size;
 
 public:
