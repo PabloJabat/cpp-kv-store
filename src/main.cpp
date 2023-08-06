@@ -1,9 +1,8 @@
 #include <iostream>
-#include <kv_store.h>
+#include "kv_store.h"
 
 int main()
 {
-
     std::cout << "Hello World" << std::endl;
 
     const int SIZE = 5;
@@ -16,7 +15,7 @@ int main()
 
     kv_store store = kv_store(keys_ptr, values_ptr, SIZE);
 
-    std::cout << "This is the result: " << store.get('1') << std::endl;
+    std::cout << "This is the result: " << store.get('6') << std::endl;
 
     return 0;
 }
