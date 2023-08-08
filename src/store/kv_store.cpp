@@ -2,7 +2,7 @@
 #include "../../include/store/kv_store.h"
 
 template <>
-kv_store<char>::kv_store(char *keys, char *values, int size)
+KVStore<char>::KVStore(char *keys, char *values, int size)
 {
     keys = keys;
     values = values;
@@ -10,7 +10,7 @@ kv_store<char>::kv_store(char *keys, char *values, int size)
 }
 
 template <>
-char kv_store<char>::get(char key)
+char KVStore<char>::get(char key)
 {
     char *current_key = keys;
     int i = 0;

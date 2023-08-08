@@ -1,7 +1,7 @@
 #pragma once
 
 template <typename V>
-class kv_store
+class KVStore
 {
 private:
     char *keys;
@@ -10,6 +10,6 @@ private:
 
 public:
     // constructor
-    kv_store(char *keys, char *values, int size);
+    KVStore(char *keys, char *values, int size);
     char get(char key);
 };
