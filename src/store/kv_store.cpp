@@ -1,5 +1,5 @@
 #include <iostream>
-#include "kv_store.h"
+#include "../../include/store/kv_store.h"
 
 template <>
 kv_store<char>::kv_store(char *keys, char *values, int size)
