@@ -1,5 +1,5 @@
 #include <iostream>
-#include "kv_store.h"
+#include "../include/store/kv_store.h"
 
 int main()
 {
@@ -16,7 +16,7 @@ int main()
     char *keys_ptr = &keys[0];
     char *values_ptr = &values[0];
 
-    kv_store<char> store = kv_store<char>(keys_ptr, values_ptr, SIZE);
+    KVStore<char> store = KVStore<char>(keys_ptr, values_ptr, SIZE);
 
     std::cout << "This is the result: " << store.get('6') << std::endl;
 
