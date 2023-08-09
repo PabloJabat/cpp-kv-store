@@ -1,21 +1,24 @@
 #pragma once
 
-template <typename K, typename V>
+#include <string>
+#include "key_value.h"
+
+template <typename V>
 class InMemoryTable
 {
+private:
+    // Variables
+    int size;
+    KeyValue<V> *internal_table;
+
+    // Hash function
+    int hash_function(std::string key);
+
 public:
     // Constructor
     InMemoryTable(int size);
 
     // CRUD Operations
-    void put(K key, V value);
-    V get(K key);
-
-private:
-    struct KeyValue
-    {
-        K key;
-        V value;
-    };
-    KeyValue **data;
+    void put(KeyValue<V> key_value);
+    V get(std::string key);
 };
